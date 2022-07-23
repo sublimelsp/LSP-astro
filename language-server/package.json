@@ -1,0 +1,7 @@
+{
+	"name": "sublime-astro",
+	"version": "1.0.0",
+	"dependencies": {
+		"@astrojs/language-server": "^0.20.1"
+	}
+}
