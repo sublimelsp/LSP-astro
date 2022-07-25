@@ -1,0 +1,63 @@
+{
+	"command": ["${node_bin}", "${server_path}", "--stdio"],
+
+	// base scope selectors to attach to
+	"selector": "text.html.astro",
+
+	// type of buffers to attach to
+	"schemes": ["file", "buffer"],
+
+	// language server settings
+	"settings": {
+		// Enable TypeScript features
+		"astro.typescript.enabled": true,
+		// Enable the usage of non-standard HTML attributes, such as the ones added by AlpineJS or petite-vue
+		"astro.typescript.allowArbitraryAttributes": false,
+		// Enable diagnostic messages for TypeScript
+		"astro.typescript.diagnostics.enabled": true,
+		// Enable hover info for TypeScript
+		"astro.typescript.hover.enabled": true,
+		// Enable document symbols for TypeScript
+		"astro.typescript.documentSymbols.enabled": true,
+		// Enable completions for TypeScript
+		"astro.typescript.completions.enabled": true,
+		// Enable go to definition for TypeScript
+		"astro.typescript.definitions.enabled": true,
+		// Enable code actions for TypeScript
+		"astro.typescript.codeActions.enabled": true,
+		// Enable signature help (parameter hints) for TypeScript
+		"astro.typescript.signatureHelp.enabled": true,
+		// Enable rename functionality for JS/TS variables inside Astro files
+		"astro.typescript.rename.enabled": true,
+		// Enable semantic tokens (used for semantic highlighting) for TypeScript.
+		"astro.typescript.semanticTokens.enabled": true,
+		// Enable HTML features
+		"astro.html.enabled": true,
+		// Enable hover info for HTML
+		"astro.html.hover.enabled": true,
+		// Enable completions for HTML
+		"astro.html.completions.enabled": true,
+		// Enable Emmet completions for HTML
+		"astro.html.completions.emmet": true,
+		// Enable tag completion for HTML
+		"astro.html.tagComplete.enabled": true,
+		// Enable document symbols for CSS
+		"astro.html.documentSymbols.enabled": true,
+		// Enable CSS features
+		"astro.css.enabled": true,
+		// Enable hover info for CSS
+		"astro.css.hover.enabled": true,
+		// Enable completions for CSS
+		"astro.css.completions.enabled": true,
+		// Enable Emmet completions for CSS
+		"astro.css.completions.emmet": true,
+		// Enable color picker for CSS
+		"astro.css.documentColors.enabled": true,
+		// Enable document symbols for CSS
+		"astro.css.documentSymbols.enabled": true,
+		// Indent the formatter by one level of indentation
+		"astro.format.indentFrontmatter": false,
+		// Add a line return between the frontmatter and the template
+		"astro.format.newLineAfterFrontmatter": true,
+	}
+}
