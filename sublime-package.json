@@ -21,16 +21,6 @@
 								"settings": {
 									"additionalProperties": false,
 									"properties": {
-										"astro.trace.server": {
-											"type": "string",
-											"enum": [
-												"off",
-												"messages",
-												"verbose"
-											],
-											"default": "off",
-											"description": "Traces the communication between VS Code and the language server."
-										},
 										"astro.typescript.enabled": {
 											"type": "boolean",
 											"default": true,
@@ -198,7 +188,7 @@
 							"properties": {
 								"LSP": {
 									"properties": {
-										"Deno": {
+										"LSP-astro": {
 											"$ref": "sublime://settings/LSP-astro#/definitions/PluginConfig"
 										}
 									}

@@ -9,9 +9,6 @@
 
 	// language server settings
 	"settings": {
-		// Traces the communication between VS Code and the language server.
-		// Valid values are: "off", "messages", "verbose".
-		"astro.trace.server": "off",
 		// Enable TypeScript features
 		"astro.typescript.enabled": true,
 		// Enable the usage of non-standard HTML attributes, such as the ones added by AlpineJS or petite-vue
