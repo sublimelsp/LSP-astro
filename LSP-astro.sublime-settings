@@ -2,7 +2,7 @@
 	"command": ["${node_bin}", "${server_path}", "--stdio"],
 
 	// base scope selectors to attach to
-	"selector": "text.html.astro",
+	"selector": "source.astro | text.html.astro",
 
 	// type of buffers to attach to
 	"schemes": ["file", "buffer"],
