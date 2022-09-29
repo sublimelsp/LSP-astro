@@ -7,6 +7,11 @@
 	// type of buffers to attach to
 	"schemes": ["file", "buffer"],
 
+	// language server initialization options
+	"initializationOptions": {
+		"typescript.serverPath": "$server_directory_path/node_modules/typescript/lib/tsserverlibrary.js"
+	},
+
 	// language server settings
 	"settings": {
 		// Enable TypeScript features
