@@ -7,6 +7,15 @@
 	// type of buffers to attach to
 	"schemes": ["file", "buffer"],
 
+	// language server initialization options
+	"initializationOptions": {
+		// Path of TypeScript language server to use if specified.
+		// If empty (default), path is determined automatically.
+		// To force Typescript bundled with LSP-astro set
+		// "$server_directory_path/node_modules/typescript/lib/tsserverlibrary.js"
+		"typescript.serverPath": ""
+	},
+
 	// language server settings
 	"settings": {
 		// Enable TypeScript features
