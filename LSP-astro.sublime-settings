@@ -9,11 +9,11 @@
 
 	// language server initialization options
 	"initializationOptions": {
-		// Path of TypeScript language server to use if specified.
+		// Path to TypeScript language server's lib directory.
 		// If empty (default), path is determined automatically.
 		// To force Typescript bundled with LSP-astro set
-		// "$server_directory_path/node_modules/typescript/lib/tsserverlibrary.js"
-		"typescript.serverPath": ""
+		// "$server_directory_path/node_modules/typescript/lib"
+		"typescript.tsdk": ""
 	},
 
 	// language server settings

@@ -21,11 +21,11 @@
 								"initializationOptions": {
 									"additionalProperties": false,
 									"properties": {
-										"typescript.serverPath": {
+										"typescript.tsdk": {
 											"type": "string",
 											"default": "",
 											"title": "TypeScript: Language Server Path",
-											"description": "Path of TypeScript language server to use if specified.\nIf empty (default), path is determined automatically.\nTo force Typescript bundled with LSP-astro set $server_directory_path/node_modules/typescript/lib/tsserverlibrary.js"
+											"description": "Path to TypeScript language server's lib directory.\nIf empty (default), path is determined automatically.\nTo force Typescript bundled with LSP-astro set $server_directory_path/node_modules/typescript/lib"
 										}
 									}
 								},

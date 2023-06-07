@@ -27,7 +27,6 @@ class LspAstroPlugin(NpmClientHandler):
         'node_modules',
         'typescript',
         'lib',
-        'tsserverlibrary.js'
     )
 
     @classmethod
@@ -58,8 +57,8 @@ class LspAstroPlugin(NpmClientHandler):
         if configuration is None:
             return
 
-        if configuration.init_options.get('typescript.serverPath'):
-            return  # don't find the `typescript.serverPath` if it was set explicitly in LSP-astro.sublime-settings
+        if configuration.init_options.get('typescript.tsdk'):
+            return  # don't find the `typescript.tsdk` if it was set explicitly in LSP-astro.sublime-settings
 
         typescript_path = None
 
@@ -81,8 +80,7 @@ class LspAstroPlugin(NpmClientHandler):
         if not typescript_path:
             return
 
-        configuration.init_options.set('typescript.serverPath', typescript_path)
-        configuration.init_options.set('typescript.tsdk', os.path.dirname(typescript_path))
+        configuration.init_options.set('typescript.tsdk', typescript_path)
 
     @classmethod
     def minimum_node_version(cls):
