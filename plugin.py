@@ -82,6 +82,7 @@ class LspAstroPlugin(NpmClientHandler):
             return
 
         configuration.init_options.set('typescript.serverPath', typescript_path)
+        configuration.init_options.set('typescript.tsdk', os.path.dirname(typescript_path))
 
     @classmethod
     def minimum_node_version(cls):
