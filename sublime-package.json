@@ -21,6 +21,16 @@
 								"initializationOptions": {
 									"additionalProperties": false,
 									"properties": {
+										"diagnosticModel": {
+											"type": "integer",
+											"default": 2,
+											"enum": [1, 2],
+											"enumDescriptions": [
+												"Diagnostic push by language server.",
+												"Diagnostic pull by language client."
+											],
+											"description": "Diagnostic update model."
+										},
 										"typescript.tsdk": {
 											"type": "string",
 											"default": "",

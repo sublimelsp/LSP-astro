@@ -9,6 +9,8 @@
 
 	// language server initialization options
 	"initializationOptions": {
+		// Diagnostic update model. (1 - Push, 2 - Pull)
+		"diagnosticModel": 2,
 		// Path to TypeScript language server's lib directory.
 		// If empty (default), path is determined automatically.
 		// To force Typescript bundled with LSP-astro set
