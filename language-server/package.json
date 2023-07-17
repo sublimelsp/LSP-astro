@@ -7,8 +7,8 @@
 		"typescript": "^5.1.6"
 	},
 	"peerDependencies": {
-		"prettier": "^2.8.8",
-		"prettier-plugin-astro": "^0.10.0"
+		"prettier": "^3.0.0",
+		"prettier-plugin-astro": "^0.11.0"
 	},
 	"peerDependenciesMeta": {
 		"prettier": {
