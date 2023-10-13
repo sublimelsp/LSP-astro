@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "1.0.0",
 	"dependencies": {
-		"@astrojs/language-server": "^2.3.3",
+		"@astrojs/language-server": "^2.4.0",
 		"typescript": "^5.2.2"
 	},
 	"peerDependencies": {
