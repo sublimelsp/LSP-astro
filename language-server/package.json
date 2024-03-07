@@ -6,6 +6,6 @@
 		"@astrojs/language-server": "^2.7.6",
 		"prettier": "^3.0.0",
 		"prettier-plugin-astro": "^0.12.0",
-		"typescript": "^5.3.3"
+		"typescript": "^5.4.2"
 	}
 }
