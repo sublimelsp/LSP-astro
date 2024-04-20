@@ -1,12 +1,22 @@
+from __future__ import annotations
 from pathlib import Path
+from typing import TYPE_CHECKING
+
 from lsp_utils import NpmClientHandler
 
+if TYPE_CHECKING:
+    from LSP.plugin import ClientConfig
+    from LSP.plugin import WorkspaceFolder
+    from sublime import Window, View
 
-def plugin_loaded():
+__all__ = ["LspAstroPlugin", "plugin_loaded", "plugin_unloaded"]
+
+
+def plugin_loaded() -> None:
     LspAstroPlugin.setup()
 
 
-def plugin_unloaded():
+def plugin_unloaded() -> None:
     LspAstroPlugin.cleanup()
 
 
@@ -18,7 +28,20 @@ class LspAstroPlugin(NpmClientHandler):
     )
 
     @classmethod
-    def is_allowed_to_start(cls, window, initiating_view, workspace_folders, configuration):
+    def is_allowed_to_start(
+        cls,
+        window: Window,
+        initiating_view: View | None = None,
+        workspace_folders: list[WorkspaceFolder] | None = None,
+        configuration: ClientConfig | None = None
+    ) -> str | None:
+        """
+        Determines if the session is allowed to start.
+
+        :returns:
+            A string describing the reason why we should not start a language server session,
+            or `None` if we should go ahead and start a session.
+        """
         if configuration is None:
             return
 
@@ -29,7 +52,7 @@ class LspAstroPlugin(NpmClientHandler):
         typescript_path = None
         typescript_relpath = Path("node_modules", "typescript", "lib")
 
-        def find_typescript_path(path):
+        def find_typescript_path(path: Path) -> Path | None:
             """
             Find typescript in the package specified ``path`` belongs to.
 
@@ -70,5 +93,5 @@ class LspAstroPlugin(NpmClientHandler):
         configuration.init_options.set("typescript.tsdk", str(typescript_path))
 
     @classmethod
-    def minimum_node_version(cls):
+    def minimum_node_version(cls) -> tuple[int, int, int]:
         return (14, 0, 0)
