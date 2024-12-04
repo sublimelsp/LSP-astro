@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "1.0.0",
 	"dependencies": {
-		"@astrojs/language-server": "^2.15.0",
+		"@astrojs/language-server": "^2.15.4",
 		"prettier": "^3.4.2",
 		"prettier-plugin-astro": "^0.14.1",
 		"typescript": "^5.7.2"
