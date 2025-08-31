@@ -1,5 +1,5 @@
 from __future__ import annotations
-from pathlib import Path
+from pathlib import Path, WindowsPath
 from typing import TYPE_CHECKING
 
 from lsp_utils import NpmClientHandler
@@ -90,7 +90,13 @@ class LspAstroPlugin(NpmClientHandler):
         if not typescript_path:
             return
 
-        configuration.init_options.set("typescript.tsdk", str(typescript_path))
+        # Escape Windows path separators
+        # see: https://github.com/sublimelsp/LSP-astro/issues/120
+        value = str(typescript_path)
+        if isinstance(typescript_path, WindowsPath):
+            value = value.replace("\\", "\\\\")
+
+        configuration.init_options.set("typescript.tsdk", value)
 
     @classmethod
     def minimum_node_version(cls) -> tuple[int, int, int]:
