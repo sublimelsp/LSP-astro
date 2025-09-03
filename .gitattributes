@@ -9,3 +9,4 @@
 /.gitattributes     export-ignore
 /.gitignore         export-ignore
 /pyproject.toml     export-ignore
+/renovate.json      export-ignore
