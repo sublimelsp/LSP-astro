@@ -8,7 +8,7 @@
 	"schemes": ["file", "buffer"],
 
 	// language server initialization options
-	"initializationOptions": {
+	"initialization_options": {
 		// Diagnostic update model. (1 - Push, 2 - Pull)
 		"diagnosticModel": 2,
 		// Path to TypeScript language server's lib directory.

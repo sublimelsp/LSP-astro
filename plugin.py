@@ -46,7 +46,7 @@ class LspAstroPlugin(NpmClientHandler):
             return
 
         # prefer explicit `typescript.tsdk` from LSP-astro.sublime-settings
-        if configuration.init_options.get("typescript.tsdk"):
+        if configuration.initialization_options.get("typescript.tsdk"):
             return
 
         typescript_path = None
@@ -96,7 +96,7 @@ class LspAstroPlugin(NpmClientHandler):
         if isinstance(typescript_path, WindowsPath):
             value = value.replace("\\", "\\\\")
 
-        configuration.init_options.set("typescript.tsdk", value)
+        configuration.initialization_options.set("typescript.tsdk", value)
 
     @classmethod
     def minimum_node_version(cls) -> tuple[int, int, int]:
