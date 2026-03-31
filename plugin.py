@@ -1,13 +1,15 @@
 from __future__ import annotations
-from pathlib import Path, WindowsPath
-from typing import TYPE_CHECKING
 
 from lsp_utils import NpmClientHandler
+from pathlib import Path
+from pathlib import WindowsPath
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from LSP.plugin import ClientConfig
     from LSP.plugin import WorkspaceFolder
-    from sublime import Window, View
+    from sublime import View
+    from sublime import Window
 
 __all__ = ["LspAstroPlugin", "plugin_loaded", "plugin_unloaded"]
 
