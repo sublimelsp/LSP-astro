@@ -19,8 +19,7 @@
 
 	// language server settings
 	"settings": {
-		// Controls whether the extension updates imports when a file is moved to a new location. In most cases, you'll want to keep this disabled as TypeScript and the Astro TypeScript plugin already handles this for you. Having multiple tools updating imports at the same time can lead to corrupted files.
-		"astro.updateImportsOnFileMove.enabled": false,
+		{{ settings | indent('\t\t') }}
 	},
 
 	"selector": "source.astro | text.html.astro",

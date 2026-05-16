@@ -1,0 +1,36 @@
+{
+    "input_repository_url": "https://github.com/withastro/astro",
+    "input_repository_json_configuration_path": "packages/language-tools/vscode/package.json",
+    "transformers": [
+        {
+            "type": "jq",
+            "options": ".contributes.configuration.properties"
+        },
+        {
+            "type": "jq",
+            "options": "walk(if type == \"object\" then del(.scope) else . end)"
+        },
+        {
+            "type": "remove_keys",
+            "options": [
+                "astro.language-server.ls-path",
+                "astro.language-server.runtime",
+                "astro.content-intellisense",
+                "astro.auto-import-cache.enabled",
+                "astro.trace.server"
+            ]
+        }
+    ],
+    "render_templates": [
+        {
+            "type": "settings",
+            "template_path": "templates/sublime-settings.jinja.json",
+            "output_path": "LSP-astro.sublime-settings"
+        },
+        {
+            "type": "schema",
+            "template_path": "templates/sublime-package.jinja.json",
+            "output_path": "sublime-package.json"
+        }
+    ]
+}
