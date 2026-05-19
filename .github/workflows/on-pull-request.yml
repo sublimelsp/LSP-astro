@@ -1,0 +1,22 @@
+name: Check configuration schema changes
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'language-server/package.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  repository-projects: write
+
+jobs:
+  check-settings:
+    uses: sublimelsp/workflows/.github/workflows/changed-settings.yaml@v2
+    with:
+      version_file: 'language-server/package.json'
+      version_regexp: '"@astrojs/language-server": "([^"]+)"'
+      version_transform: 'astro-vscode@{}'
