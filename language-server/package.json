@@ -5,7 +5,7 @@
 	"dependencies": {
 		"@astrojs/language-server": "2.16.13",
 		"prettier": "3.9.6",
-		"prettier-plugin-astro": "0.14.1",
+		"prettier-plugin-astro": "1.0.0",
 		"typescript": "5.9.3"
 	}
 }
