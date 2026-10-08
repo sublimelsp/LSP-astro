@@ -29,7 +29,7 @@ class LspAstroPlugin(LspPlugin):
             cls.plugin_storage_path,
             ResourcePath('Packages', package_name, 'language-server'),
             Path('node_modules', '@astrojs', 'language-server', 'bin', 'nodeServer.js'),
-            node_version_requirement='>=14',
+            node_version_requirement='^20.19.0 || >=22.12.0',
         )
 
         # prefer explicit `typescript.tsdk` from LSP-astro.sublime-settings
