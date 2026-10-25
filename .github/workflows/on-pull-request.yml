@@ -4,8 +4,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'language-server/package.json'
   workflow_dispatch:
 
 permissions:
