@@ -13,4 +13,4 @@ jobs:
     # Provides the Astro syntax, which Sublime Text doesn't include.
     with:
       extra-packages: |
-        SublimeText/Astro@4134-
+        Astro
